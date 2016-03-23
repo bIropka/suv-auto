@@ -1,4 +1,10 @@
-@font-face {font-family: "MyriadPro Bold";src: url("../fonts/MYRIADPRO-BOLD.OTF");}
+@font-face {font-family: "Lato Regular";src: url("../fonts/Lato-Regular.ttf");}
+@font-face {font-family: "Lato Black";src: url("../fonts/Lato-Black.ttf");}
+@font-face {font-family: "Lato Bold";src: url("../fonts/Lato-Bold.ttf");}
+@font-face {font-family: "Lato Italic";src: url("../fonts/Lato-Italic.ttf");}
+@font-face {font-family: "Lato Light";src: url("../fonts/Lato-Light.ttf");}
+@font-face {font-family: "Lato Light Italic";src: url("../fonts/Lato-LightItalic.ttf");}
+@font-face {font-family: "Lato Thin Italic";src: url("../fonts/Lato-ThinItalic.ttf");}
 
 * {
     margin: 0;
@@ -6,6 +12,77 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "MyriadPro Regular", sans-serif;
+    font-family: "Lato Regular", sans-serif;
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    background: #ffffff;
+}
+
+.header, .footer, .menu-top, .header-info {
+    width: 100%;
+}
+
+.block-content {
+    width: 95%;
+    max-width: 1090px;
+    margin: 0 auto;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.menu-top {
+    background: #000000;
+    position: relative;
+    text-align: center;
+    padding: 2px 0;
+}
+.menu-top ul {
+    display: inline-block;
+}
+.menu-top ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+.menu-top ul li:last-child {
+    margin-right: 0;
+}
+.menu-top ul li a {
+    font-size: 13px;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 18px;
+}
+.menu-top ul li a:hover {
+    text-decoration: underline;
+}
+
+.dotted-line {
+    width: 100%;
+    border-bottom: 3px dotted #727373;
+    position: absolute;
+    bottom: -10px;
+}
+
+.header-info {
+    background: #f2f2f2;
+    height: 145px;
+}
+.header-info .block-content {
+    position: relative;
+}
+.header-info .logo {
+    position: absolute;
+    left: 0;
+    bottom: -145px;
+}
+.header-info .logo img {
+    display: block;
+    width: 148px;
+    height: 164px;
 }
 
