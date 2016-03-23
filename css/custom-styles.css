@@ -25,17 +25,22 @@ ul li {
     display: inline-block;
 }
 
-a, button, input[type='submit'] {
+a, button, input {
     outline: none;
     border: none;
     cursor: pointer;
 }
-button::-moz-focus-inner, input[type="submit"]::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
     outline: none;
     border: none;
 }
 
-.header, .footer, .menu-top, .header-info, .menu-middle, .block-choice {
+input:focus::-webkit-input-placeholder {color: transparent}
+input:focus::-moz-placeholder {color: transparent}
+input:focus:-moz-placeholder {color: transparent}
+input:focus:-ms-input-placeholder {color: transparent}
+
+.header, .footer, .menu-top, .header-info, .menu-middle, .block-choice, .menu-bottom {
     width: 100%;
 }
 
@@ -326,18 +331,172 @@ button::-moz-focus-inner, input[type="submit"]::-moz-focus-inner {
 .menu-middle ul li a:hover {
     text-decoration: underline;
 }
+.block-choice {
+    background: url('../images/car.png') no-repeat;
+    background-size: cover;
+    padding-top: 2%;
+}
 .title-block {
     font-family: "Lato Bold", sans-serif;
     font-size: 30px;
     text-transform: uppercase;
 }
-.block-choice {
-    padding: 2% 2.5%;
+.block-choice .title-block {
+    margin-left: 5%;
 }
-.block-choice .chooser-1-image {
+.block-choice .choose-car {
+    margin-left: 5%;
+}
+.block-choice .select-image {
+    display: block;
     width: 240px;
     height: 40px;
+    background: #ffffff;
+    margin-top: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:  0 10px 10px -10px rgba(0, 0, 0, 0.75);
+    box-shadow:  0 10px 10px -10px rgba(0, 0, 0, 0.75);
+    position: relative;
+    cursor: pointer;
+}
+.block-choice .selected {
+    font-size: 16px;
+    color: #727373;
+    line-height: 40px;
+    margin-left: 10px;
+}
+.block-choice .select-mark {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url('../images/bottom-arrow.png') no-repeat center;
+    background-size: cover;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+}
+.block-choice .select-image ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 240px;
+    width: 240px;
+    height: 400px;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: auto;
+    padding: 5px 10px;
+}
+.block-choice .select-image ul li {
+    width: 100%;
+    line-height: 20px;
+}
+.block-choice .select-image ul li:hover {
+    color: #ffcc02;
 }
 .block-choice .select-1-wrap, .block-choice .select-2-wrap {
     display: none;
+}
+.choose-car input[type="submit"] {
+    width: 240px;
+    height: 80px;
+    background: #5384ad;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 15px 0 35px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.choose-car input[type="submit"]:hover {
+    background: #589dc5;
+}
+.choose-car input[type="submit"]:active {
+    background: #3f5f7e;
+}
+
+.block-choice .choose-product {
+    display: inline-block;
+    width: auto;
+    vertical-align: top;
+}
+.block-choice input[type="search"] {
+    width: 420px;
+    height: 35px;
+    border: 2px solid rgba(204, 204, 204, 0.5);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:  0 10px 10px -10px rgba(0, 0, 0, 0.75);
+    box-shadow:  0 10px 10px -10px rgba(0, 0, 0, 0.75);
+    padding-left: 15px;
+    vertical-align: top;
+}
+.choose-product input[type="submit"] {
+    height: 35px;
+    line-height: 35px;
+    background: #ffcc03;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    vertical-align: top;
+}
+.choose-product input[type="submit"]:hover {
+    background: #ffe803;
+}
+.choose-product input[type="submit"]:active {
+    background: #ccb703;
+}
+.choose-product .radio-buttons {
+    display: inline-block;
+    vertical-align: top;
+}
+.choose-product .radio-buttons label {
+    display: block;
+    color: #727373;
+    margin-left: 10px;
+}
+.choose-product .radio-buttons label input {
+    margin-right: 5px;
+}
+.block-choice .last-search {
+    display: inline-block;
+    margin-left: 15px;
+}
+.block-choice .last-search a {
+    display: block;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #595bb0;
+    text-decoration: none;
+}
+.block-choice .last-search a:hover {
+    text-decoration: underline;
+}
+
+.menu-bottom ul {
+    width: 100%;
+}
+.menu-bottom ul li {
+    width: 24.25%;
+    margin-right: 1%;
+}
+.menu-bottom ul li:last-child {
+    margin-right: 0;
 }
