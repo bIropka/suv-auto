@@ -30,6 +30,12 @@ a, button, input {
     border: none;
     cursor: pointer;
 }
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
 button::-moz-focus-inner, input::-moz-focus-inner {
     outline: none;
     border: none;
@@ -54,6 +60,7 @@ input:focus:-ms-input-placeholder {color: transparent}
     clear: both;
 }
 
+/****** header *****/
 .menu-top {
     background: #000000;
     position: relative;
@@ -72,11 +79,7 @@ input:focus:-ms-input-placeholder {color: transparent}
 .menu-top ul li a {
     font-size: 13px;
     color: #ffffff;
-    text-decoration: none;
     line-height: 18px;
-}
-.menu-top ul li a:hover {
-    text-decoration: underline;
 }
 
 .dotted-line {
@@ -121,7 +124,7 @@ input:focus:-ms-input-placeholder {color: transparent}
 .store-info .store-location {
     width: 100%;
 }
-.store-info .icon-geo {
+.icon-geo {
     display: inline-block;
     width: 20px;
     height: 40px;
@@ -323,13 +326,9 @@ input:focus:-ms-input-placeholder {color: transparent}
     font-size: 16px;
     text-transform: uppercase;
     line-height: 16px;
-    text-decoration: none;
     color: #000000;
     vertical-align: middle;
     margin-left: 5px;
-}
-.menu-middle ul li a:hover {
-    text-decoration: underline;
 }
 .block-choice {
     background: url('../images/car.png') no-repeat;
@@ -436,12 +435,12 @@ input:focus:-ms-input-placeholder {color: transparent}
     margin-left: 20px;
 }
 
-.block-choice .choose-product {
+.choose-product {
     display: inline-block;
     width: auto;
     vertical-align: top;
 }
-.block-choice input[type="search"] {
+.choose-product input[type="search"] {
     width: 420px;
     height: 35px;
     border: 2px solid rgba(204, 204, 204, 0.5);
@@ -484,21 +483,17 @@ input:focus:-ms-input-placeholder {color: transparent}
 .choose-product .radio-buttons label input {
     margin-right: 5px;
 }
-.block-choice .last-search {
+.last-search {
     display: inline-block;
     margin-left: 15px;
 }
-.block-choice .last-search a {
+.last-search a {
     display: block;
     vertical-align: top;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 18px;
     color: #595bb0;
-    text-decoration: none;
-}
-.block-choice .last-search a:hover {
-    text-decoration: underline;
 }
 
 .menu-bottom {
@@ -516,7 +511,9 @@ input:focus:-ms-input-placeholder {color: transparent}
 }
 .menu-bottom ul li:hover {
     background: #ffe803;
-    text-decoration: underline;
+}
+.menu-bottom ul li:hover a {
+    text-decoration: none;
 }
 .menu-bottom ul li:active {
     background: #ccb703;
@@ -525,7 +522,6 @@ input:focus:-ms-input-placeholder {color: transparent}
     display: block;
     height: 80px;
     text-align: center;
-    text-decoration: none;
     color: #000000;
 }
 .menu-bottom ul li:last-child {
@@ -544,7 +540,7 @@ input:focus:-ms-input-placeholder {color: transparent}
     font-size: 14px;
 }
 
-/****** header end ********/
+/****** the end of the header ********/
 
 /****** main page ******/
 .block-catalogs {
@@ -713,6 +709,66 @@ input:focus:-ms-input-placeholder {color: transparent}
 .block-brands {
     margin: 3% 0;
 }
+.block-brands .title-block {
+    margin: 10px 0 25px 20px;
+}
+.block-brands ul {
+    text-align: left;
+    margin-left: 20px;
+}
+.block-brands ul li {
+    width: 24%;
+    margin-bottom: 20px;
+}
+.block-brands ul li a {
+    width: auto;
+    color: #000000;
+}
+.block-brands .brand-name {
+    font-size: 18px;
+    vertical-align: middle;
+}
+.block-brands .icon-brand {
+    display: inline-block;
+    height: 40px;
+    width: 75px;
+    background: url('../images/sprite-brands.png') 20px center no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+}
+.block-brands ul li:nth-child(2) .icon-brand {background: url('../images/sprite-brands.png') 2.93% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(3) .icon-brand {background: url('../images/sprite-brands.png') 5.93% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(4) .icon-brand {background: url('../images/sprite-brands.png') 8.55% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(5) .icon-brand {background: url('../images/sprite-brands.png') 11.9% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(6) .icon-brand {background: url('../images/sprite-brands.png') 14.8% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(7) .icon-brand {background: url('../images/sprite-brands.png') 17.7% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(8) .icon-brand {background: url('../images/sprite-brands.png') 20.9% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(9) .icon-brand {background: url('../images/sprite-brands.png') 23.9% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(10) .icon-brand {background: url('../images/sprite-brands.png') 27.1% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(11) .icon-brand {background: url('../images/sprite-brands.png') 30.1% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(12) .icon-brand {background: url('../images/sprite-brands.png') 33.2% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(13) .icon-brand {background: url('../images/sprite-brands.png') 36.5% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(14) .icon-brand {background: url('../images/sprite-brands.png') 39.45% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(15) .icon-brand {background: url('../images/sprite-brands.png') 42.4% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(16) .icon-brand {background: url('../images/sprite-brands.png') 45.3% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(17) .icon-brand {background: url('../images/sprite-brands.png') 48.45% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(18) .icon-brand {background: url('../images/sprite-brands.png') 51.6% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(19) .icon-brand {background: url('../images/sprite-brands.png') 54.6% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(20) .icon-brand {background: url('../images/sprite-brands.png') 57.7% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(21) .icon-brand {background: url('../images/sprite-brands.png') 60.75% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(22) .icon-brand {background: url('../images/sprite-brands.png') 63.85% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(23) .icon-brand {background: url('../images/sprite-brands.png') 66.7% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(24) .icon-brand {background: url('../images/sprite-brands.png') 69.95% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(25) .icon-brand {background: url('../images/sprite-brands.png') 72.85% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(26) .icon-brand {background: url('../images/sprite-brands.png') 76.2% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(27) .icon-brand {background: url('../images/sprite-brands.png') 79.05% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(28) .icon-brand {background: url('../images/sprite-brands.png') 82.2% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(29) .icon-brand {background: url('../images/sprite-brands.png') 85.25% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(30) .icon-brand {background: url('../images/sprite-brands.png') 88.3% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(31) .icon-brand {background: url('../images/sprite-brands.png') 91.4% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(32) .icon-brand {background: url('../images/sprite-brands.png') 94.5% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(33) .icon-brand {background: url('../images/sprite-brands.png') 97.45% center no-repeat; background-size: cover;}
+.block-brands ul li:nth-child(34) .icon-brand {background: url('../images/sprite-brands.png') 100.5% center no-repeat; background-size: cover;}
 
 .block-about-store {
     margin-bottom: 3%;
@@ -726,7 +782,50 @@ input:focus:-ms-input-placeholder {color: transparent}
     text-align: justify;
     padding: 10px 20px;
 }
+/****** the end of the main page ******/
 
+/***** error 404 page ****/
+.error-content {
+    width: 100%;
+    padding-bottom: 75%;
+    background: url('../images/background-404.jpg');
+    background-size: cover;
+    margin: 3% 0;
+    position: relative;
+}
+.bread-crumbs li a {
+    color: #888383;
+    font-size: 16px;
+}
+.bread-crumbs li:after {
+    content: '>';
+    color: #888383;
+    font-size: 16px;
+    margin: 0 5px;
+}
+.bread-crumbs li:last-child:after {
+    display: none;
+}
+.error-content .error-message {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+.error-message .code {
+    display: inline-block;
+    font-family: "Lato Black", sans-serif;
+    font-size: 135px;
+    color: #888383;
+}
+.error-message .text-1 {
+
+}
+.error-message a {
+
+}
+/***** the end of the error-404 page ****/
+
+/***** footer ****/
 .block-advantages {
     width: 100%;
     background: #ffcc03;
@@ -800,15 +899,62 @@ input:focus:-ms-input-placeholder {color: transparent}
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
-    text-decoration: none;
-}
-.footer-menu ul li a:hover {
-    text-decoration: underline;
 }
 
 .footer-info {
     text-align: left;
+    padding-bottom: 20px;
 }
-.work-time, .footer-location, .copyrights {
+.work-time, .footer-location {
     display: inline-block;
+    margin-top: 10px;
+    vertical-align: middle;
 }
+.work-time-title {
+    display: inline-block;
+    font-family: "Lato Black", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.work-time-info {
+    display: inline-block;
+    font-family: "Lato Italic", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin-left: 20px;
+}
+.footer-location {
+    float: right;
+}
+.come-to-us {
+    width: 150px;
+    height: 35px;
+    background: transparent;
+    border: 2px solid #ffcc02;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    font-family: "Lato Black", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.come-to-us:hover {
+    background: #ffe803;
+    color: #000000;
+}
+.come-to-us:active {
+    background: #ccb703;
+    color: #000000;
+}
+.copyrights {
+    display: inline-block;
+    margin-left: 30px;
+    font-family: "Lato Light", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+ }
+/**** the end of the footer *****/
