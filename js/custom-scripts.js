@@ -22,6 +22,18 @@ $(document).ready(function () {
         }
     });
 
+    $('.icon-big-basket').click(function() {
+        $('.basket-submit').click();
+    });
+
+    $('.product-amount-controls .control').click(function() {
+        var currentAmount = $(this).siblings('label').find('.input-amount').val();
+        console.log(currentAmount);
+        if($(this).hasClass('control-add')) {
+            //currentAmount
+        }
+    });
+
     $('.slider').slick({
         autoplay: false,
         autoplaySpeed: 2000,

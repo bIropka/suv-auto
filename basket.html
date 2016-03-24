@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Корзина</title>
     <link rel="stylesheet" href="css/slick.css"/>
     <link rel="stylesheet" href="css/custom-styles.css"/>
 </head>
@@ -120,102 +120,20 @@
             </ul>
         </nav>
 
-        <div class="block-choice">
+        <form action="" class="choose-product">
+            <label><input type="search" placeholder="Поиск"/></label>
+            <input type="submit" value="Искать"/>
 
-            <div class="title-block">выберите автомобиль</div>
-
-            <form action="" class="choose-car">
-                <!-- Изображения селектов, связаны с самими селектами скриптом-->
-                <div class="select-image select-1-image">
-                    <div class="selected">Марка</div>
-                    <ul>
-                        <li>Марка-1</li>
-                        <li>Марка-2</li>
-                        <li>Марка-3</li>
-                        <li>Марка-4</li>
-                        <li>Марка-5</li>
-                    </ul>
-                    <div class="select-mark"></div>
-                </div>
-                <div class="select-image select-2-image">
-                    <div class="selected">Марка</div>
-                    <ul>
-                        <li>Марка-1</li>
-                        <li>Марка-2</li>
-                        <li>Марка-3</li>
-                        <li>Марка-4</li>
-                        <li>Марка-5</li>
-                    </ul>
-                    <div class="select-mark"></div>
-                </div>
-                <!-- Сами селекты, скрыты с целью обеспечения кроссбраузерности интерфейса-->
-                <label class="select-1-wrap">
-                    <select id="select-1">
-                        <option value="Марка-1"></option>
-                        <option value="Марка-2"></option>
-                        <option value="Марка-3"></option>
-                        <option value="Марка-4"></option>
-                        <option value="Марка-5"></option>
-                    </select>
-                </label>
-                <label class="select-2-wrap">
-                    <select id="select-2">
-                        <option value="Марка-1"></option>
-                        <option value="Марка-2"></option>
-                        <option value="Марка-3"></option>
-                        <option value="Марка-4"></option>
-                        <option value="Марка-5"></option>
-                    </select>
-                </label>
-                <input type="submit" value="Подобрать запчасти"/>
-            </form>
-
-            <div class="choose-car-article">Выбор конкретного<br>автомобиля<br>ускорит процесc<br>поиска товара</div>
-
-            <form action="" class="choose-product">
-                <label><input type="search" placeholder="Поиск"/></label>
-                <input type="submit" value="Искать"/>
-
-                <div class="radio-buttons">
-                    <label><input type="radio" name="search-criteria" value="by-code"/>Поиск по коду: 0450904149</label>
-                    <label><input type="radio" name="search-criteria" value="by-name" checked/>Поиск по названию,
-                        например: масло масло skoda</label>
-                </div>
-            </form>
-
-            <div class="last-search">
-                <a href="#">Вы искали</a>
-                <a href="#">Вы смотрели</a>
+            <div class="radio-buttons">
+                <label><input type="radio" name="search-criteria" value="by-code"/>Поиск по коду: 0450904149</label>
+                <label><input type="radio" name="search-criteria" value="by-name" checked/>Поиск по названию,
+                    например: масло масло skoda</label>
             </div>
+        </form>
 
-        </div>
-
-        <div class="menu-bottom">
-            <ul>
-                <li>
-                    <a href="#">
-                        <span class="text-1">Подбор<br>амортизаторов</span>
-                        <span class="text-2">по марке автомобиля</span>
-                    </a>
-                </li><!--
-             --><li>
-                    <a href="#">
-                        <span class="text-1">Подбор<br>тормозных дисков</span>
-                        <span class="text-2">по марке автомобиля</span>
-                    </a>
-                </li><!--
-             --><li>
-                    <a href="#">
-                        <span class="text-1">Подбор<br>тормозных колодок</span>
-                        <span class="text-2">по марке автомобиля</span>
-                    </a>
-                </li><!--
-             --><li>
-                    <a href="#">
-                        <span class="text-1">Жалобы,<br>предложения,<br>благодарности</span>
-                    </a>
-                </li>
-            </ul>
+        <div class="last-search">
+            <a href="#">Вы искали</a>
+            <a href="#">Вы смотрели</a>
         </div>
 
     </div>
@@ -224,217 +142,98 @@
 
 <div class="block-content">
 
-    <div class="title-block">SUVauto - Интернет-магазин автозапчастей</div>
+    <div class="block-basket">
 
-    <div class="block-catalogs">
-        <ul>
-            <li>
-                <img src="images/catalog-item-1.png" alt=""/>
+        <div class="title-block">корзина</div>
 
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
+        <form action="#" class="basket-form">
 
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">BMW</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-3.png" alt=""/>
+            <table class="basket-table">
+                <tr>
+                    <th>Изображение</th>
+                    <th>Название</th>
+                    <th>Код</th>
+                    <th>На складе</th>
+                    <th>Срок, дн.</th>
+                    <th>Цена</th>
+                    <th>Кол-во</th>
+                    <th></th>
+                </tr>
+                <tr class="product-1-row">
+                    <td class="basket-product-image"><img src="images/product.jpg" alt="product"/></td>
+                    <td class="basket-product-name">Мастило Motul Specific MB229.51 SAE 5W30 1L MOTUL MOTULSPECIFICMB 22951SAE5W301L101588</td>
+                    <td class="basket-product-code">MOTULSPECIFICMB 22951SAE5W301L101588</td>
+                    <td class="basket-product-balance">2</td>
+                    <td class="basket-product-time">1-4</td>
+                    <td class="basket-product-price">580,00</td>
+                    <td class="basket-product-amount">
+                        <div class="product-amount-controls">
+                            <div class="control-add control"></div>
+                            <div class="control-remove control"></div>
+                            <label><input class="input-amount" type="number" value="0"/></label>
+                        </div>
+                        <div class="current-amount">0</div>
+                    </td>
+                    <td><div class="icon-delete"></div></td>
+                </tr>
+                <tr class="product-1-row">
+                    <td class="basket-product-image"><img src="images/product.jpg" alt="product"/></td>
+                    <td class="basket-product-name">Мастило Motul Specific MB229.51 SAE 5W30 1L MOTUL MOTULSPECIFICMB 22951SAE5W301L101588</td>
+                    <td class="basket-product-code">MOTULSPECIFICMB 22951SAE5W301L101588</td>
+                    <td class="basket-product-balance">2</td>
+                    <td class="basket-product-time">1-4</td>
+                    <td class="basket-product-price">580,00</td>
+                    <td class="basket-product-amount">
+                        <div class="product-amount-controls">
+                            <div class="control-add control"></div>
+                            <div class="control-remove control"></div>
+                            <label><input class="input-amount" type="number" value="2"/></label>
+                        </div>
+                        <div class="current-amount">2</div>
+                    </td>
+                    <td><div class="icon-delete"></div></td>
+                </tr>
+                <tr class="product-1-row">
+                    <td class="basket-product-image"><img src="images/product.jpg" alt="product"/></td>
+                    <td class="basket-product-name">Мастило Motul Specific MB229.51 SAE 5W30 1L MOTUL MOTULSPECIFICMB 22951SAE5W301L101588</td>
+                    <td class="basket-product-code">MOTULSPECIFICMB 22951SAE5W301L101588</td>
+                    <td class="basket-product-balance">2</td>
+                    <td class="basket-product-time">1-4</td>
+                    <td class="basket-product-price">580,00</td>
+                    <td class="basket-product-amount">
+                        <div class="product-amount-controls">
+                            <div class="control-add control"></div>
+                            <div class="control-remove control"></div>
+                            <label><input class="input-amount" type="number" value="2"/></label>
+                        </div>
+                        <div class="current-amount">2</div>
+                    </td>
+                    <td><div class="icon-delete"></div></td>
+                </tr>
+            </table>
+            <ul class="basket-result-row">
+                <li><input class="basket-form-reset" type="reset" value="Очистить корзину"/></li>
+                <li>Итого:</li>
+                <li><span class="order-weight">25</span>кг</li>
+                <li><span class="order-cost">350,00</span>грн</li>
+            </ul>
 
-                <div class="catalog-name">Двигатель</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
+            <input class="basket-submit" type="submit"/>
+            <div class="icon-big-basket"></div>
+            <div class="text-1">Оформить<br>заказ</div>
 
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">BMW</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
+        </form>
 
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">BMW</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-1.png" alt=""/>
+        <form class="callback-form" action="#">
+            <div class="title">
+                Можно не заполнять никаких форм, просто оставить телефон
+                и консультант решит все вопросы по оформлению заказа
+            </div>
+            <label><input class="client-name" type="text" placeholder="Введите имя"/></label>
+            <label><input class="client-phone" type="text" placeholder="Введите номер телефона"/></label>
+            <input type="submit" value="Заказать"/>
+        </form>
 
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">STEIN</a></li>
-                    <li><a href="#">LUXOIL</a></li>
-                    <li><a href="#">MOTUL</a></li>
-                    <li><a href="#">TOTAL</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-3.png" alt=""/>
-
-                <div class="catalog-name">Двигатель</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">BMW</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">BMW</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-1.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">BMW</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-3.png" alt=""/>
-
-                <div class="catalog-name">Двигатель</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">BMW</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">BMW</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-1.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">STEIN</a></li>
-                    <li><a href="#">LUXOIL</a></li>
-                    <li><a href="#">MOTUL</a></li>
-                    <li><a href="#">TOTAL</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-3.png" alt=""/>
-
-                <div class="catalog-name">Двигатель</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">BMW</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">BMW</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-1.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-2.png" alt=""/>
-
-                <div class="catalog-name">каталог BMW</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">STEIN</a></li>
-                    <li><a href="#">LUXOIL</a></li>
-                    <li><a href="#">MOTUL</a></li>
-                    <li><a href="#">TOTAL</a></li>
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-            <li>
-                <img src="images/catalog-item-3.png" alt=""/>
-
-                <div class="catalog-name">Двигатель</div>
-                <ul class="catalog-parts">
-                    <li><a href="#">Другие</a></li>
-                </ul>
-            </li>
-        </ul>
     </div>
 
 </div>
@@ -592,213 +391,31 @@
 </div>
 
 <div class="block-content">
-    <div class="block-brands">
-        <div class="title-block">SUVauto - Интернет-магазин автозапчастей</div>
+    <div class="menu-bottom">
         <ul>
             <li>
                 <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Alfa Romeo</span>
+                    <span class="text-1">Подбор<br>амортизаторов</span>
+                    <span class="text-2">по марке автомобиля</span>
                 </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Ford</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">MINI</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Skoda</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Audi</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Honda</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Mitsubishi</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Smart</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">BMW</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Hyundai</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Nissan</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">SsangYong</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Chevrolet</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Jaguar</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Hyundai</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Suzuki</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Chrysler</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Jeep</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Peugeot</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Toyota</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Citroën</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">KIA</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Porsche</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Volkswagen</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Dacia</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Land Rover</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Renault</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Volvo</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Daewoo</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Mazda</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">SAAB</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Fiat</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Mercedes</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="icon-brand"></span>
-                    <span class="brand-name">Seat</span>
-                </a>
-            </li>
+            </li><!--
+             --><li>
+            <a href="#">
+                <span class="text-1">Подбор<br>тормозных дисков</span>
+                <span class="text-2">по марке автомобиля</span>
+            </a>
+        </li><!--
+             --><li>
+            <a href="#">
+                <span class="text-1">Подбор<br>тормозных колодок</span>
+                <span class="text-2">по марке автомобиля</span>
+            </a>
+        </li><!--
+             --><li>
+            <a href="#">
+                <span class="text-1">Жалобы,<br>предложения,<br>благодарности</span>
+            </a>
+        </li>
         </ul>
     </div>
     <div class="block-about-store">
