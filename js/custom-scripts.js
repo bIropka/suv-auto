@@ -22,4 +22,16 @@ $(document).ready(function () {
         }
     });
 
+    $('.slider').slick({
+        autoplay: false,
+        autoplaySpeed: 2000,
+        appendArrows: '.slider-arrow',
+        initialSlide: 0,
+        prevArrow: '.slider-left-arrow',
+        nextArrow: '.slider-right-arrow',
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4
+    });
+
 });

@@ -589,11 +589,226 @@ input:focus:-ms-input-placeholder {color: transparent}
 }
 
 .popular-products {
+    margin-top: 3%;
     text-align: center;
+    background: #f4f4f4;
+}
+.popular-products .block-content {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 20px;
 }
 .popular-products .title-block {
-    display: inline-block;
-    width: auto;
+    display: block;
+    font-weight: 600;
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
     background: #ffcc03;
-    padding: 5px 15px;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.popular-products .slider {
+    width: 95%;
+    margin: 0 auto;
+}
+.slider-arrow {
+    position: absolute;
+    width: 15px;
+    height: 53px;
+    margin: auto;
+    cursor: pointer;
+}
+.slider-arrow:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.slider-arrow:active {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+}
+.slider-left-arrow {
+    left: 5px;
+    top: 50%;
+}
+.slider-right-arrow {
+    top: 50%;
+    right: 5px;
+}
+.popular-products .slide {
+    border: 2px solid #ffcc03;
+    width: 200px;
+    margin: 10px;
+    outline: none;
+    background: #ffffff;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.popular-products .slide:hover {
+    border: 2px solid #ffaa10;
+}
+.popular-products .slide .product-name {
+    font-family: "Lato Bold", sans-serif;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.popular-products .slide img {
+    display: inline-block;
+    width: 90%;
+    height: auto;
+}
+.popular-products .slide .price-block {
+    display: inline-block;
+    width: 135px;
+    text-align: left;
+    vertical-align: bottom;
+}
+.popular-products .slide .old-price,
+.popular-products .slide .old-price .value{
+    text-decoration: line-through;
+    font-family: "Lato Bold", sans-serif;
+    font-size: 17px;
+    color: #969696;
+}
+.popular-products .slide .new-price,
+.popular-products .slide .new-price .value{
+    font-family: "Lato Bold", sans-serif;
+    font-size: 24px;
+}
+.popular-products .slide .icon-basket {
+    display: inline-block;
+    vertical-align: bottom;
+}
+.popular-products .slide .icon-basket a {
+    display: block;
+    width: 63px;
+    height: 60px;
+    background: url('../images/sprite-basket.png') no-repeat left;
+    background-size: cover;
+}
+.popular-products .slide .icon-basket a:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.popular-products .slide .icon-basket a:active {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+.block-brands {
+    margin: 3% 0;
+}
+
+.block-about-store {
+    margin-bottom: 3%;
+}
+.block-about-store .title-block {
+    margin: 10px 0 20px 20px;
+}
+.block-about-store p {
+    font-size: 18px;
+    text-indent: 25px;
+    text-align: justify;
+    padding: 10px 20px;
+}
+
+.block-advantages {
+    width: 100%;
+    background: #ffcc03;
+}
+.block-advantages .block-content {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+.block-advantages .title-block {
+    display: block;
+    font-weight: 600;
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
+    background: #000000;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: #ffffff;
+    text-align: center;
+}
+.block-advantages ul {
+    margin: 20px 0;
+    text-align: center;
+}
+.block-advantages ul li {
+    width: 165px;
+    vertical-align: top;
+    margin: 0 5px;
+}
+.block-advantages .icon-advantage {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid #ffffff;
+    margin-bottom: 10px;
+    background: url('../images/sprite-advantages.png') no-repeat -3% 55%;
+    background-size: auto 60%;
+}
+.block-advantages li:nth-child(2) .icon-advantage {background: url('../images/sprite-advantages.png') no-repeat 18% 55%; background-size: auto 60%;}
+.block-advantages li:nth-child(3) .icon-advantage {background: url('../images/sprite-advantages.png') no-repeat 39% 55%; background-size: auto 60%;}
+.block-advantages li:nth-child(4) .icon-advantage {background: url('../images/sprite-advantages.png') no-repeat 60% 55%; background-size: auto 60%;}
+.block-advantages li:nth-child(5) .icon-advantage {background: url('../images/sprite-advantages.png') no-repeat 81.5% 55%; background-size: auto 60%;}
+.block-advantages li:nth-child(6) .icon-advantage {background: url('../images/sprite-advantages.png') no-repeat 103% 55%; background-size: auto 60%;}
+.block-advantages .advantage-text {
+    font-family: "Lato Light Italic", sans-serif;
+    font-size: 15px;
+}
+.footer-bottom {
+    background: #000000;
+    border: 1px solid transparent;
+}
+.footer-menu {
+    border-bottom: 3px dotted #727373;
+}
+.footer-menu ul {
+    margin: 10px 0;
+    text-align: center;
+}
+.footer-menu ul li {
+    margin: 0 15px;
+}
+.footer-menu ul li a {
+    color: #ffcc01;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.footer-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-info {
+    text-align: left;
+}
+.work-time, .footer-location, .copyrights {
+    display: inline-block;
 }
