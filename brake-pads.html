@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Корзина</title>
+    <title>Подбор тормозных дисков</title>
     <link rel="stylesheet" href="css/slick.css"/>
     <link rel="stylesheet" href="css/custom-styles.css"/>
 </head>
@@ -136,9 +136,38 @@
             <a href="#">Вы смотрели</a>
         </div>
 
+        <div class="menu-bottom menu-bottom-brake-pads">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="text-1">Подбор<br>амортизаторов</span>
+                        <span class="text-2">по марке автомобиля</span>
+                    </a>
+                </li><!--
+             --><li>
+                    <a href="#">
+                        <span class="text-1">Подбор<br>тормозных дисков</span>
+                        <span class="text-2">по марке автомобиля</span>
+                    </a>
+                </li><!--
+             --><li>
+                    <a href="#">
+                        <span class="text-1">Подбор<br>тормозных колодок</span>
+                        <span class="text-2">по марке автомобиля</span>
+                    </a>
+                </li><!--
+             --><li>
+                    <a href="#">
+                        <span class="text-1">Жалобы,<br>предложения,<br>благодарности</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
         <ul class="bread-crumbs">
             <li><a href="index.html">Главная</a></li>
-            <li>Корзина</li>
+            <li><a href="index.html">Каталог</a></li>
+            <li>Масла</li>
         </ul>
 
     </div>
@@ -147,99 +176,144 @@
 
 <div class="block-content">
 
-    <div class="block-basket">
+    <div class="brake-pads-block">
 
-        <div class="title-block">корзина</div>
+        <form class="choose-brake-pads" action="#">
 
-        <form action="#" class="basket-form">
+            <div class="title-block">выберите автомобиль</div>
 
-            <table class="product-table basket-table">
-                <tr>
-                    <th>Изображение</th>
-                    <th>Название</th>
-                    <th>Код</th>
-                    <th>На складе</th>
-                    <th>Срок, дн.</th>
-                    <th>Цена</th>
-                    <th>Кол-во</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <td class="product-image"><img src="images/product.jpg" alt="product"/></td>
-                    <td class="product-name">Мастило Motul Specific MB229.51 SAE 5W30 1L MOTUL MOTULSPECIFICMB 22951SAE5W301L101588</td>
-                    <td class="product-code">MOTULSPECIFICMB 22951SAE5W301L101588</td>
-                    <td class="product-balance">2</td>
-                    <td class="product-time">1-4</td>
-                    <td class="product-price">580,00</td>
-                    <td class="product-amount">
-                        <div class="product-amount-controls">
-                            <div class="control-add control"></div>
-                            <div class="control-remove control"></div>
-                            <label><input class="input-amount" type="number" value="0"/></label>
-                        </div>
-                        <div class="current-amount">0</div>
-                    </td>
-                    <td><div class="icon-delete"></div></td>
-                </tr>
-                <tr>
-                    <td class="product-image"><img src="images/product.jpg" alt="product"/></td>
-                    <td class="product-name">Мастило Motul Specific MB229.51 SAE 5W30 1L MOTUL MOTULSPECIFICMB 22951SAE5W301L101588</td>
-                    <td class="product-code">MOTULSPECIFICMB 22951SAE5W301L101588</td>
-                    <td class="product-balance">2</td>
-                    <td class="product-time">1-4</td>
-                    <td class="product-price">580,00</td>
-                    <td class="product-amount">
-                        <div class="product-amount-controls">
-                            <div class="control-add control"></div>
-                            <div class="control-remove control"></div>
-                            <label><input class="input-amount" type="number" value="1"/></label>
-                        </div>
-                        <div class="current-amount">1</div>
-                    </td>
-                    <td><div class="icon-delete"></div></td>
-                </tr>
-                <tr>
-                    <td class="product-image"><img src="images/product.jpg" alt="product"/></td>
-                    <td class="product-name">Мастило Motul Specific MB229.51 SAE 5W30 1L MOTUL MOTULSPECIFICMB 22951SAE5W301L101588</td>
-                    <td class="product-code">MOTULSPECIFICMB 22951SAE5W301L101588</td>
-                    <td class="product-balance">2</td>
-                    <td class="product-time">1-4</td>
-                    <td class="product-price">580,00</td>
-                    <td class="product-amount">
-                        <div class="product-amount-controls">
-                            <div class="control-add control"></div>
-                            <div class="control-remove control"></div>
-                            <label><input class="input-amount" type="number" value="2"/></label>
-                        </div>
-                        <div class="current-amount">2</div>
-                    </td>
-                    <td><div class="icon-delete"></div></td>
-                </tr>
-            </table>
-            <div class="basket-result-row">
-                <input class="basket-form-reset" type="reset" value="Очистить корзину"/>
-                <div class="basket-result">
-                    <span>Итого:</span>
-                    <div class="order-weight"><span>25</span>кг</div>
-                    <div class="order-cost"><span>350,00</span>грн</div>
-                </div>
+            <!-- Изображения селектов, связаны с самими селектами скриптом-->
+            <div class="select-image select-1-image">
+                <div class="selected">Марка</div>
+                <ul>
+                    <li>Марка-1</li>
+                    <li>Марка-2</li>
+                    <li>Марка-3</li>
+                    <li>Марка-4</li>
+                    <li>Марка-5</li>
+                </ul>
+                <div class="select-mark"></div>
             </div>
-
-            <input class="basket-submit" type="submit"/>
-            <div class="icon-big-basket"></div>
-            <div class="text-1">Оформить<br>заказ</div>
-
+            <div class="select-image select-2-image">
+                <div class="selected">Марка</div>
+                <ul>
+                    <li>Марка-1</li>
+                    <li>Марка-2</li>
+                    <li>Марка-3</li>
+                    <li>Марка-4</li>
+                    <li>Марка-5</li>
+                </ul>
+                <div class="select-mark"></div>
+            </div>
+            <div class="select-image select-3-image">
+                <div class="selected">Марка</div>
+                <ul>
+                    <li>Модификация-1</li>
+                    <li>Модификация-2</li>
+                    <li>Модификация-3</li>
+                    <li>Модификация-4</li>
+                    <li>Модификация-5</li>
+                </ul>
+                <div class="select-mark"></div>
+            </div>
+            <div class="select-image select-4-image">
+                <div class="selected">Марка</div>
+                <ul>
+                    <li>Положение амортизатора-1</li>
+                    <li>Положение амортизатора-2</li>
+                    <li>Положение амортизатора-3</li>
+                    <li>Положение амортизатора-4</li>
+                    <li>Положение амортизатора-5</li>
+                </ul>
+                <div class="select-mark"></div>
+            </div>
+            <!-- Сами селекты, скрыты с целью обеспечения кроссбраузерности интерфейса-->
+            <label class="select-1-wrap">
+                <select id="select-1">
+                    <option value="Марка-1"></option>
+                    <option value="Марка-2"></option>
+                    <option value="Марка-3"></option>
+                    <option value="Марка-4"></option>
+                    <option value="Марка-5"></option>
+                </select>
+            </label>
+            <label class="select-2-wrap">
+                <select id="select-2">
+                    <option value="Марка-1"></option>
+                    <option value="Марка-2"></option>
+                    <option value="Марка-3"></option>
+                    <option value="Марка-4"></option>
+                    <option value="Марка-5"></option>
+                </select>
+            </label>
+            <label class="select-3-wrap">
+                <select id="select-3">
+                    <option value="Модификация-1"></option>
+                    <option value="Модификация-2"></option>
+                    <option value="Модификация-3"></option>
+                    <option value="Модификация-4"></option>
+                    <option value="Модификация-5"></option>
+                </select>
+            </label>
+            <label class="select-4-wrap">
+                <select id="select-4">
+                    <option value="Положение амортизатора-1"></option>
+                    <option value="Положение амортизатора-2"></option>
+                    <option value="Положение амортизатора-3"></option>
+                    <option value="Положение амортизатора-4"></option>
+                    <option value="Положение амортизатора-5"></option>
+                </select>
+            </label>
+            <input type="submit" value="Подобрать запчасти"/>
+            
         </form>
 
-        <form class="callback-form" action="#">
-            <div class="title">
-                Можно не заполнять никаких форм, просто оставить телефон
-                и консультант решит все вопросы по оформлению заказа
-            </div>
-            <label><input class="client-name" type="text" placeholder="Введите имя"/></label>
-            <label><input class="client-phone" type="text" placeholder="Введите номер телефона"/></label>
-            <input type="submit" value="Заказать"/>
-        </form>
+        <table class="product-table brake-pads-table">
+            <tr>
+                <th>Изображение</th>
+                <th>Название</th>
+                <th>Код</th>
+                <th>На складе</th>
+                <th>Срок, дн.</th>
+                <th>Цена</th>
+                <th>Кол-во</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td class="product-image"><img src="images/product.jpg" alt="product"/></td>
+                <td class="product-name">Мастило Motul Specific MB229.51 SAE 5W30 1L MOTUL MOTULSPECIFICMB 22951SAE5W301L101588</td>
+                <td class="product-code">MOTULSPECIFICMB 22951SAE5W301L101588</td>
+                <td class="product-balance">2</td>
+                <td class="product-time">1-4</td>
+                <td class="product-price">580,00</td>
+                <td class="product-amount">
+                    <div class="product-amount-controls">
+                        <div class="control-add control"></div>
+                        <div class="control-remove control"></div>
+                        <label><input class="input-amount" type="number" value="0"/></label>
+                    </div>
+                    <div class="current-amount">0</div>
+                </td>
+                <td><div class="icon-basket"><a href="#"></a></div></td>
+            </tr>
+            <tr>
+                <td class="product-image"><img src="images/product.jpg" alt="product"/></td>
+                <td class="product-name">Мастило Motul Specific MB229.51 SAE 5W30 1L MOTUL MOTULSPECIFICMB 22951SAE5W301L101588</td>
+                <td class="product-code">MOTULSPECIFICMB 22951SAE5W301L101588</td>
+                <td class="product-balance">2</td>
+                <td class="product-time">1-4</td>
+                <td class="product-price">580,00</td>
+                <td class="product-amount">
+                    <div class="product-amount-controls">
+                        <div class="control-add control"></div>
+                        <div class="control-remove control"></div>
+                        <label><input class="input-amount" type="number" value="0"/></label>
+                    </div>
+                    <div class="current-amount">0</div>
+                </td>
+                <td><div class="icon-basket"><a href="#"></a></div></td>
+            </tr>
+        </table>
 
     </div>
 
@@ -397,34 +471,7 @@
     </div>
 </div>
 
-<div class="block-content">
-    <div class="menu-bottom">
-        <ul>
-            <li>
-                <a href="#">
-                    <span class="text-1">Подбор<br>амортизаторов</span>
-                    <span class="text-2">по марке автомобиля</span>
-                </a>
-            </li><!--
-             --><li>
-            <a href="#">
-                <span class="text-1">Подбор<br>тормозных дисков</span>
-                <span class="text-2">по марке автомобиля</span>
-            </a>
-        </li><!--
-             --><li>
-            <a href="#">
-                <span class="text-1">Подбор<br>тормозных колодок</span>
-                <span class="text-2">по марке автомобиля</span>
-            </a>
-        </li><!--
-             --><li>
-            <a href="#">
-                <span class="text-1">Жалобы,<br>предложения,<br>благодарности</span>
-            </a>
-        </li>
-        </ul>
-    </div>
+<div class="block-content block-content-brake-pads">
     <div class="block-about-store">
         <div class="title-block">О магазине SUVauto</div>
 
