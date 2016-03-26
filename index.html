@@ -125,8 +125,11 @@
             <div class="title-block">выберите автомобиль</div>
 
             <form action="" class="choose-car">
+
                 <!-- Изображения селектов, связаны с самими селектами скриптом-->
-                <div class="select-image select-1-image">
+                <!-- Сами селекты скрыты с целью обеспечения кроссбраузерности интерфейса-->
+
+                <div class="select-image">
                     <div class="selected">Марка</div>
                     <ul>
                         <li>Марка-1</li>
@@ -136,20 +139,6 @@
                         <li>Марка-5</li>
                     </ul>
                     <div class="select-mark"></div>
-                </div>
-                <div class="select-image select-2-image">
-                    <div class="selected">Марка</div>
-                    <ul>
-                        <li>Марка-1</li>
-                        <li>Марка-2</li>
-                        <li>Марка-3</li>
-                        <li>Марка-4</li>
-                        <li>Марка-5</li>
-                    </ul>
-                    <div class="select-mark"></div>
-                </div>
-                <!-- Сами селекты, скрыты с целью обеспечения кроссбраузерности интерфейса-->
-                <label class="select-1-wrap">
                     <select id="select-1">
                         <option value="Марка-1"></option>
                         <option value="Марка-2"></option>
@@ -157,8 +146,19 @@
                         <option value="Марка-4"></option>
                         <option value="Марка-5"></option>
                     </select>
-                </label>
-                <label class="select-2-wrap">
+                    <label class="select-label" for="select-1"></label>
+                </div>
+
+                <div class="select-image">
+                    <div class="selected">Марка</div>
+                    <ul>
+                        <li>Марка-1</li>
+                        <li>Марка-2</li>
+                        <li>Марка-3</li>
+                        <li>Марка-4</li>
+                        <li>Марка-5</li>
+                    </ul>
+                    <div class="select-mark"></div>
                     <select id="select-2">
                         <option value="Марка-1"></option>
                         <option value="Марка-2"></option>
@@ -166,7 +166,9 @@
                         <option value="Марка-4"></option>
                         <option value="Марка-5"></option>
                     </select>
-                </label>
+                    <label class="select-label" for="select-2"></label>
+                </div>
+
                 <input type="submit" value="Подобрать запчасти"/>
             </form>
 
@@ -224,9 +226,10 @@
 
 <div class="block-content">
 
-    <div class="title-block">SUVauto - Интернет-магазин автозапчастей</div>
-
     <div class="block-catalogs">
+
+        <div class="title-block">SUVauto - Интернет-магазин автозапчастей</div>
+
         <ul>
             <li>
                 <img src="images/catalog-item-1.png" alt=""/>

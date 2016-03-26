@@ -2,26 +2,40 @@ $(document).ready(function () {
 
     $('.select-image').click(function() {
 
-        var selectorId = $(this).index();
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $(this).find('.select-mark').removeClass('selected-mark');
+        } else {
+            $(this).addClass('active');
+            $(this).find('.select-mark').addClass('selected-mark');
+        }
+
+        var selectorId = $(this).index('.select-image');
+        console.log(selectorId);
         $('.select-image').each(function(index, element) {
             if(index == selectorId){
                 $(element).find('ul').fadeToggle();
             } else {
                 $(element).find('ul').fadeOut(100);
+                $(this).find('.select-mark').removeClass('selected-mark');
             }
         });
     });
 
     $('.select-image ul li').click(function() {
-        var selectorId = $(this).parents('.select-image').index();
         var productName = $(this).html();
         var productId = $(this).index();
+        var thisOptions = $(this).parent().siblings('select').find('option');
+
         $(this).parents('.select-image').find('.selected').html(productName);
-        if(selectorId == 0) {
-            $('#select-1 option').eq(productId).attr("selected", "selected");
-        } else if(selectorId == 1) {
-            $('#select-2 option').eq(productId).attr("selected", "selected");
-        }
+
+        $(thisOptions).each(function(id, option) {
+            if(id == productId){
+                $(option).attr('selected', 'selected');
+            } else {
+                $(option).attr('selected', false);
+            }
+        });
     });
 
     $('.icon-big-basket').click(function() {

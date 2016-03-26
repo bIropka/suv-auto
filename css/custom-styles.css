@@ -28,6 +28,10 @@ ul li {
     display: inline-block;
 }
 
+.select-label, select {
+    display: none;
+}
+
 a, button, input {
     outline: none;
     border: none;
@@ -227,7 +231,7 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 .basket-social .block-social {
     width: 100%;
 }
-.icon-basket {
+.header .icon-basket {
     display: inline-block;
     float: left;
 }
@@ -358,6 +362,19 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     font-size: 30px;
     text-transform: uppercase;
 }
+.title-block-shadow {
+    display: inline-block;
+    font-family: "Lato Bold", sans-serif;
+    text-transform: uppercase;
+    width: auto;
+    padding: 0 50px 10px;
+    margin: 0 auto 20px;
+    font-size: 35px;
+    -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow:  0 10px 10px -10px rgba(0, 0, 0, 0.75);
+    box-shadow:  0 10px 10px -10px rgba(0, 0, 0, 0.75);
+    text-align: center;
+}
 .block-choice .title-block {
     margin-left: 5%;
 }
@@ -365,7 +382,7 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     margin-left: 5%;
     display: inline-block;
 }
-.block-choice .select-image {
+.select-image {
     display: block;
     width: 240px;
     height: 40px;
@@ -380,17 +397,17 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     position: relative;
     cursor: pointer;
 }
-.block-choice .selected {
+.selected {
     font-size: 16px;
     color: #727373;
     line-height: 40px;
     margin-left: 10px;
 }
-.block-choice .select-mark {
+.select-mark {
     display: inline-block;
     width: 22px;
     height: 22px;
-    background: url('../images/bottom-arrow.png') no-repeat center;
+    background: url('../images/sprite-circle-arrow.png') no-repeat left;
     background-size: cover;
     position: absolute;
     right: 5px;
@@ -399,12 +416,16 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     margin: auto;
     cursor: pointer;
 }
-.block-choice .select-image ul {
+.selected-mark {
+    background: url('../images/sprite-circle-arrow.png') no-repeat 33% center;
+    background-size: cover;
+}
+.select-image ul {
     display: none;
     position: absolute;
     top: 50px;
     left: 0;
-    width: 240px;
+    width: 100%;
     max-height: 400px;
     background: #ffffff;
     border: 1px solid #cccccc;
@@ -415,15 +436,12 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     padding: 5px 10px;
     z-index: 1;
 }
-.block-choice .select-image ul li {
+.select-image ul li {
     width: 100%;
     line-height: 20px;
 }
-.block-choice .select-image ul li:hover {
+.select-image ul li:hover {
     color: #ffcc02;
-}
-.block-choice .select-1-wrap, .block-choice .select-2-wrap {
-    display: none;
 }
 .choose-car input[type="submit"] {
     width: 240px;
@@ -562,6 +580,7 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 /****** main page ******/
 .block-catalogs {
     width: 100%;
+    margin-top: 30px;
 }
 .block-catalogs>ul {
     display: block;
@@ -741,6 +760,12 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     width: auto;
     color: #000000;
 }
+.block-brands ul li a:hover {
+    text-decoration: none;
+}
+.block-brands ul li a:hover .brand-name {
+    text-decoration: underline;
+}
 .block-brands .brand-name {
     font-size: 18px;
     vertical-align: middle;
@@ -847,19 +872,9 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 /***** basket page *****/
 .block-basket {
     width: 100%;
-    margin: 3% 0;
-}
-.block-basket .title-block {
-    width: 300px;
-    margin: 0 auto 20px;
-    font-size: 35px;
-    padding-bottom: 10px;
-    -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow:  0 10px 10px -10px rgba(0, 0, 0, 0.75);
-    box-shadow:  0 10px 10px -10px rgba(0, 0, 0, 0.75);
+    margin: 0 0 3%;
     text-align: center;
 }
-
 .basket-form {
     width: 100%;
     text-align: center;
@@ -1103,7 +1118,7 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 .alternative-block .choose-car {
     margin-left: 13%;
 }
-.alternative-block .select-images {
+.select-images {
     display: inline-block;
 }
 .alternative-block .choose-car input[type="submit"] {
@@ -1117,18 +1132,8 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 .block-oils {
     text-align: center;
 }
-.block-oils .title-block {
-    width: 300px;
-    margin: 0 auto 20px;
-    font-size: 35px;
-    padding-bottom: 10px;
-    -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow:  0 10px 10px -10px rgba(0, 0, 0, 0.75);
-    box-shadow:  0 10px 10px -10px rgba(0, 0, 0, 0.75);
-    text-align: center;
-}
 .filter-oils-1 {
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
 }
 .filter-oils-1 li a {
@@ -1220,12 +1225,53 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 .menu-bottom-brake-pads li:nth-child(2) a {
     color: #ffffff;
 }
-.brake-pads-table th {
+.choose-brake-pads {
+    width: 100%;
+    background: url('../images/background-brake-pads.jpg') no-repeat;
+    background-size: cover;
+    padding-left: 30px;
+    border: 1px solid #ffffff;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.choose-brake-pads .title-block {
+    margin: 20px 0 10px 80px;
+}
+.choose-brake-pads .select-images {
+    margin-right: 20px;
+}
+
+.choose-brake-pads .select-image {
+    width: 300px;
+}
+.choose-brake-pads input[type="submit"] {
+    display: block;
+    width: 350px;
+    height: 60px;
+    background: #5384ad;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 15px 0 20px 140px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.choose-brake-pads input[type="submit"]:hover {
+    background: #589dc5;
+}
+.choose-brake-pads input[type="submit"]:active {
+    background: #3f5f7e;
+}
+.product-table-dark th {
     background: #000000;
     color: #ffcc03;
     font-weight: 100;
 }
-.brake-pads-table .icon-basket a {
+.product-table-dark .icon-basket a {
     width: 50px;
     background: url('../images/sprite-basket.png') no-repeat left;
     background-size: cover;

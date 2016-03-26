@@ -180,95 +180,105 @@
 
         <form class="choose-brake-pads" action="#">
 
-            <div class="title-block">выберите автомобиль</div>
+            <div class="title-block">подбор тормозных дисков</div>
 
             <!-- Изображения селектов, связаны с самими селектами скриптом-->
-            <div class="select-image select-1-image">
-                <div class="selected">Марка</div>
-                <ul>
-                    <li>Марка-1</li>
-                    <li>Марка-2</li>
-                    <li>Марка-3</li>
-                    <li>Марка-4</li>
-                    <li>Марка-5</li>
-                </ul>
-                <div class="select-mark"></div>
+            <!-- Сами селекты скрыты с целью обеспечения кроссбраузерности интерфейса-->
+
+            <div class="select-images">
+
+                <div class="select-image">
+                    <div class="selected">Марка</div>
+                    <ul>
+                        <li>Марка-1</li>
+                        <li>Марка-2</li>
+                        <li>Марка-3</li>
+                        <li>Марка-4</li>
+                        <li>Марка-5</li>
+                    </ul>
+                    <div class="select-mark"></div>
+                    <select id="select-1">
+                        <option value="Марка-1"></option>
+                        <option value="Марка-2"></option>
+                        <option value="Марка-3"></option>
+                        <option value="Марка-4"></option>
+                        <option value="Марка-5"></option>
+                    </select>
+                    <label class="select-label" for="select-1"></label>
+                </div>
+
+                <div class="select-image">
+                    <div class="selected">Марка</div>
+                    <ul>
+                        <li>Марка-1</li>
+                        <li>Марка-2</li>
+                        <li>Марка-3</li>
+                        <li>Марка-4</li>
+                        <li>Марка-5</li>
+                    </ul>
+                    <div class="select-mark"></div>
+                    <select id="select-2">
+                        <option value="Марка-1"></option>
+                        <option value="Марка-2"></option>
+                        <option value="Марка-3"></option>
+                        <option value="Марка-4"></option>
+                        <option value="Марка-5"></option>
+                    </select>
+                    <label class="select-label" for="select-2"></label>
+                </div>
+
             </div>
-            <div class="select-image select-2-image">
-                <div class="selected">Марка</div>
-                <ul>
-                    <li>Марка-1</li>
-                    <li>Марка-2</li>
-                    <li>Марка-3</li>
-                    <li>Марка-4</li>
-                    <li>Марка-5</li>
-                </ul>
-                <div class="select-mark"></div>
+
+            <div class="select-images">
+
+                <div class="select-image">
+                    <div class="selected">Модификация</div>
+                    <ul>
+                        <li>Модификация-1</li>
+                        <li>Модификация-2</li>
+                        <li>Модификация-3</li>
+                        <li>Модификация-4</li>
+                        <li>Модификация-5</li>
+                    </ul>
+                    <div class="select-mark"></div>
+                    <select id="select-3">
+                        <option value="Модификация-1"></option>
+                        <option value="Модификация-2"></option>
+                        <option value="Модификация-3"></option>
+                        <option value="Модификация-4"></option>
+                        <option value="Модификация-5"></option>
+                    </select>
+                    <label class="select-label" for="select-3"></label>
+                </div>
+
+                <div class="select-image">
+                    <div class="selected">Положение амортизатора</div>
+                    <ul>
+                        <li>Положение амортизатора-1</li>
+                        <li>Положение амортизатора-2</li>
+                        <li>Положение амортизатора-3</li>
+                        <li>Положение амортизатора-4</li>
+                        <li>Положение амортизатора-5</li>
+                    </ul>
+                    <div class="select-mark"></div>
+                    <select id="select-4">
+                        <option value="Положение амортизатора-1"></option>
+                        <option value="Положение амортизатора-2"></option>
+                        <option value="Положение амортизатора-3"></option>
+                        <option value="Положение амортизатора-4"></option>
+                        <option value="Положение амортизатора-5"></option>
+                    </select>
+                    <label class="select-label" for="select-4"></label>
+                </div>
+
             </div>
-            <div class="select-image select-3-image">
-                <div class="selected">Марка</div>
-                <ul>
-                    <li>Модификация-1</li>
-                    <li>Модификация-2</li>
-                    <li>Модификация-3</li>
-                    <li>Модификация-4</li>
-                    <li>Модификация-5</li>
-                </ul>
-                <div class="select-mark"></div>
-            </div>
-            <div class="select-image select-4-image">
-                <div class="selected">Марка</div>
-                <ul>
-                    <li>Положение амортизатора-1</li>
-                    <li>Положение амортизатора-2</li>
-                    <li>Положение амортизатора-3</li>
-                    <li>Положение амортизатора-4</li>
-                    <li>Положение амортизатора-5</li>
-                </ul>
-                <div class="select-mark"></div>
-            </div>
-            <!-- Сами селекты, скрыты с целью обеспечения кроссбраузерности интерфейса-->
-            <label class="select-1-wrap">
-                <select id="select-1">
-                    <option value="Марка-1"></option>
-                    <option value="Марка-2"></option>
-                    <option value="Марка-3"></option>
-                    <option value="Марка-4"></option>
-                    <option value="Марка-5"></option>
-                </select>
-            </label>
-            <label class="select-2-wrap">
-                <select id="select-2">
-                    <option value="Марка-1"></option>
-                    <option value="Марка-2"></option>
-                    <option value="Марка-3"></option>
-                    <option value="Марка-4"></option>
-                    <option value="Марка-5"></option>
-                </select>
-            </label>
-            <label class="select-3-wrap">
-                <select id="select-3">
-                    <option value="Модификация-1"></option>
-                    <option value="Модификация-2"></option>
-                    <option value="Модификация-3"></option>
-                    <option value="Модификация-4"></option>
-                    <option value="Модификация-5"></option>
-                </select>
-            </label>
-            <label class="select-4-wrap">
-                <select id="select-4">
-                    <option value="Положение амортизатора-1"></option>
-                    <option value="Положение амортизатора-2"></option>
-                    <option value="Положение амортизатора-3"></option>
-                    <option value="Положение амортизатора-4"></option>
-                    <option value="Положение амортизатора-5"></option>
-                </select>
-            </label>
+
+
             <input type="submit" value="Подобрать запчасти"/>
             
         </form>
 
-        <table class="product-table brake-pads-table">
+        <table class="product-table product-table-dark">
             <tr>
                 <th>Изображение</th>
                 <th>Название</th>
