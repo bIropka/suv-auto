@@ -42,6 +42,10 @@ $(document).ready(function () {
         $('.basket-submit').click();
     });
 
+    $('.price-form .icon-basket').click(function() {
+        $('.price-form-submit').click();
+    });
+
     $('.product-amount-controls .control').click(function() {
         var thisInput = $(this).siblings('label').find('.input-amount');
         var currentAmount = parseInt($(thisInput).val());
@@ -69,6 +73,16 @@ $(document).ready(function () {
         if(!$(this).hasClass('active')){
             $('.filter-oils-2 li').removeClass('active');
             $(this).addClass('active');
+        }
+    });
+
+    $('.image-list li').click(function() {
+        if(!$(this).hasClass('active')){
+            var currentPhoto = $(this).index();
+            $('.image-list li').removeClass('active');
+            $(this).addClass('active');
+            $('.image-main li').css('display', 'none');
+            $('.image-main li').eq(currentPhoto).fadeIn();
         }
     });
 
