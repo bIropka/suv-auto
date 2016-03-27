@@ -1807,14 +1807,19 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
         vertical-align: top;
         margin-right: 10px;
     }
+    .header .choose-product {
+        float: left;
+        vertical-align: bottom;
+    }
+    .header .last-search {
+        float: left;
+        vertical-align: bottom;
+    }
     .header .choose-product .radio-buttons {
         display: block;
-        margin: 10px 0;
+        margin: 10px 0 0;
     }
-    .block-choice {
-        background: url('../images/car.png') no-repeat left center;
-        padding-top: 5px;
-    }
+
 }
 @media (max-width: 640px) {
     .header-info {
@@ -1845,14 +1850,23 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
         margin-right: 0;
     }
     .choose-car input[type="submit"] {
-        margin-bottom: 70px;
+        margin-bottom: 50px;
+    }
+    .header .last-search {
+        float: right;
+        margin-top: -40px;
+        margin-right: 20px;
+        vertical-align: bottom;
     }
 }
-@media (max-width: 640px) {
-
+@media (max-width: 540px) {
+    .choose-product input[type="search"] {
+        width: 250px;
+    }
+    .header .last-search {
+        margin-top: 0;
+    }
 }
 @media (max-width: 480px) {
-    /*.choose-car input[type="submit"] {
-        margin-bottom: 10px;
-    }*/
+
 }
