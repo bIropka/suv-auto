@@ -2070,7 +2070,10 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     }
     .basket-table td:nth-child(2),
     .product-table-dark td:nth-child(2),
-    .product-table-light td:nth-child(2) {
+    .product-table-light td:nth-child(2),
+    .basket-table th,
+    .product-table-dark th,
+    .product-table-light th {
         font-size: 14px;
     }
     .product-parameters-block .product-cost .value {
@@ -2089,10 +2092,68 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     .using-table th, .using-table td {
         font-size: 10px;
     }
+    .store-contacts .numbers {
+        font-size: 16px;
+    }
+    .store-contacts .get-call {
+        margin: 0 auto;
+    }
 }
 @media (max-width: 380px) {
     .choose-product input[type="search"] {
         margin-bottom: 10px;
+    }
+    .popular-products .title-block, .block-advantages .title-block {
+        font-size: 16px;
+        line-height: 40px;
+    }
+    .store-contacts .numbers {
+        width: auto;
+    }
+    .basket-table td:nth-child(6),
+    .product-table-dark td:nth-child(6),
+    .product-table-light td:nth-child(6),
+    .basket-table td:nth-child(2),
+    .product-table-dark td:nth-child(2),
+    .product-table-light td:nth-child(2),
+    .basket-table th,
+    .product-table-dark th,
+    .product-table-light th {
+        font-size: 10px;
+    }
+    .basket-form-reset {
+        font-size: 12px;
+        padding: 5px 10px 7px;
+        margin-left: 5px;
+    }
+    .basket-result>span {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .product-table-dark .icon-basket a {
+        width: 32px;
+        height: 30px;
+        background: url('../images/sprite-basket.png') no-repeat left;
+        background-size: cover;
+    }
+    .product-table-dark th:nth-child(2), .product-table-light th:nth-child(2) {
+        width: 55%;
+    }
+    .product-table-dark th:nth-child(6), .product-table-light th:nth-child(6) {
+        width: 15%;
+    }
+    .product-table-dark th:nth-child(7), .product-table-light th:nth-child(7) {
+        width: 15%;
+    }
+    .product-table-dark th:nth-child(8), .product-table-light th:nth-child(8) {
+        width: 15%;
+    }
+    .product-parameters-block .product-cost .value {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .price-form .text-1 {
+        font-size: 14px;
     }
 }
 
