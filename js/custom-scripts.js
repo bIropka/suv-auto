@@ -2,13 +2,8 @@ $(document).ready(function () {
 
     $('.select-image').click(function() {
 
-        if($(this).hasClass('active')){
-            $(this).removeClass('active');
-            $(this).find('.select-mark').removeClass('selected-mark');
-        } else {
-            $(this).addClass('active');
-            $(this).find('.select-mark').addClass('selected-mark');
-        }
+        $(this).toggleClass('active');
+        $(this).find('.select-mark').toggleClass('selected-mark');
 
         var selectorId = $(this).index('.select-image');
         console.log(selectorId);
@@ -84,6 +79,11 @@ $(document).ready(function () {
             $('.image-main li').css('display', 'none');
             $('.image-main li').eq(currentPhoto).fadeIn();
         }
+    });
+
+    $('.icon-menu-middle-control').click(function() {
+        $(this).parent().toggleClass('active');
+        $('.menu-middle ul').fadeToggle();
     });
 
 

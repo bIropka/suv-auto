@@ -54,7 +54,7 @@ input:focus:-moz-placeholder {color: transparent!important;}
 input:focus:-ms-input-placeholder {color: transparent!important;}
 
 .block-content {
-    width: 95%;
+    width: 100%;
     max-width: 1090px;
     margin: 0 auto;
 }
@@ -82,7 +82,9 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 }
 
 /****** header *****/
-.header {margin-bottom: 10px;}
+.header {
+    margin-bottom: 10px;
+}
 .menu-top {
     background: #000000;
     position: relative;
@@ -113,15 +115,17 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 
 .header-info {
     background: #f2f2f2;
+    text-align: center;
+    padding-bottom: 10px;
 }
 .header-info .block-content {
     position: relative;
-    height: 145px;
 }
 .header-info .logo {
+    display: block;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -10px;
 }
 .header-info .logo img {
     display: block;
@@ -131,10 +135,12 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 
 .store-info {
     display: inline-block;
-    margin-left: 170px;
-    width: 300px;
+    margin-left: 50px;
+    width: auto;
     margin-top: 25px;
     vertical-align: top;
+    margin-right: 15px;
+    text-align: left;
 }
 .store-info .store-name {
     font-family: "Lato Black", sans-serif;
@@ -156,9 +162,11 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 }
 .store-info ul {
     display: inline-block;
-    width: 250px;
     margin-left: 10px;
     vertical-align: middle;
+}
+.store-info ul li {
+    display: block;
 }
 .store-info .city {
     display: inline-block;
@@ -173,9 +181,9 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 
 .store-contacts {
     display: inline-block;
-    width: 350px;
     vertical-align: top;
     margin-top: 25px;
+    text-align: left;
 }
 .store-contacts .icon-phone {
     display: inline-block;
@@ -202,6 +210,7 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     text-decoration: underline;
 }
 .store-contacts .get-call {
+    display: block;
     width: 240px;
     height: 40px;
     background: #ffcc02;
@@ -224,7 +233,7 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     margin-left: 20px;
     margin-top: 25px;
     vertical-align: top;
-    width: 200px;
+    text-align: left;
 }
 .basket-social .header-basket,
 .basket-social .block-authorization,
@@ -257,25 +266,21 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     transform: scale(0.8);
 }
 .basket-social .basket-name {
-    display: inline-block;
-    width: 140px;
+    display: block;
     margin-left: 5px;
     font-family: "Lato Light", sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
     vertical-align: top;
-    float: left;
 }
 .basket-social .products-number, .basket-social .order-cost {
-    display: inline-block;
-    width: 140px;
+    display: block;
     margin-left: 5px;
     font-family: "Lato Light", sans-serif;
     font-size: 12px;
     font-weight: 600;
     vertical-align: top;
-    float: left;
 }
 .basket-social .sign-in, .basket-social .sign-up {
     display: inline-block;
@@ -351,6 +356,46 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     color: #000000;
     vertical-align: middle;
     margin-left: 5px;
+}
+.menu-middle-control {
+    display: none;
+    padding: 10px 0 10px 20px;
+    vertical-align: middle;
+}
+.menu-middle-control .to-hide {
+    display: none;
+}
+.menu-middle-control span {
+    font-family: "Lato Bold", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.menu-middle>.active span {
+    color: #ffcc02;
+}
+.active .to-hide {
+    display: inline-block;
+}
+.active .to-show {
+    display: none;
+}
+.icon-menu-middle-control {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: #000000 url('../images/sprite-menu.png') no-repeat left;
+    background-size: cover;
+    vertical-align: middle;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.menu-middle>.active .icon-menu-middle-control {
+    background: #ffcc02 url('../images/sprite-menu.png') no-repeat right;
+    background-size: cover;
 }
 .block-choice {
     background: url('../images/car.png') no-repeat;
@@ -1709,3 +1754,105 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     color: #ffffff;
  }
 /**** the end of the footer *****/
+
+/**** media queries ****/
+@media (max-width: 1090px) {
+    .header .logo img {
+        width: 131px;
+        height: 145px;
+    }
+    .header .store-info {
+        margin-left: 140px;
+    }
+    .menu-middle-control {
+        display: block;
+    }
+    .menu-middle ul {
+        display: none;
+        padding: 0;
+    }
+    .menu-middle ul li {
+        display: block;
+        margin: 0 0 10px 20px;
+        width: auto;
+    }
+    .menu-middle ul li a {
+        margin-left: 20px;
+    }
+}
+@media (max-width: 1000px) {
+    .header-info {
+        text-align: left;
+    }
+    .header-info .logo {
+        display: inline-block;
+        position: static;
+        float: left;
+        vertical-align: top;
+        margin-left: 10px;
+        margin-bottom: 150px;
+    }
+    .header .store-info {
+        margin-left: 10px;
+        float: left;
+        vertical-align: top;
+    }
+    .header .store-contacts {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+    }
+    .header .basket-social {
+        float: right;
+        vertical-align: top;
+        margin-right: 10px;
+    }
+    .header .choose-product .radio-buttons {
+        display: block;
+        margin: 10px 0;
+    }
+    .block-choice {
+        background: url('../images/car.png') no-repeat left center;
+        padding-top: 5px;
+    }
+}
+@media (max-width: 640px) {
+    .header-info {
+        text-align: center;
+    }
+    .header-info .logo {
+        display: inline-block;
+        float: none;
+        vertical-align: bottom;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+    .header-info .logo img {
+        width: 90px;
+        height: 100px;
+    }
+    .header .store-info {
+        margin-left: 0;
+        float: none;
+        vertical-align: middle;
+    }
+    .header .store-contacts {
+        position: static;
+    }
+    .header .basket-social {
+        float: none;
+        vertical-align: middle;
+        margin-right: 0;
+    }
+    .choose-car input[type="submit"] {
+        margin-bottom: 70px;
+    }
+}
+@media (max-width: 640px) {
+
+}
+@media (max-width: 480px) {
+    /*.choose-car input[type="submit"] {
+        margin-bottom: 10px;
+    }*/
+}
