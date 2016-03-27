@@ -581,12 +581,13 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
 .menu-bottom ul {
     width: 100%;
     margin-top: 20px;
+    text-align: center;
 }
 .menu-bottom ul li {
-    width: 24.25%;
-    margin-right: 1%;
+    width: 260px;
     background: #ffcc03;
     vertical-align: middle;
+    margin-bottom: 10px;
 }
 .menu-bottom ul li:hover {
     background: #5384ad;
@@ -1779,6 +1780,9 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     .menu-middle ul li a {
         margin-left: 20px;
     }
+    .block-catalogs>ul {
+        text-align: center;
+    }
 }
 @media (max-width: 1000px) {
     .header-info {
@@ -1866,7 +1870,43 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     .header .last-search {
         margin-top: 0;
     }
+    .title-block {
+        text-align: center;
+    }
 }
 @media (max-width: 480px) {
-
+    .title-block {
+        font-size: 24px;
+    }
+    .header .block-choice {
+        text-align: center;
+    }
+    .header .block-choice .choose-car-article {
+        display: none;
+    }
+    .header .choose-product {
+        text-align: left;
+        margin-left: 10px;
+    }
+    .header .last-search {
+        text-align: left;
+        float: left;
+        margin-top: 10px;
+        margin-right: 0;
+        vertical-align: bottom;
+    }
+    .block-choice {
+        background: #f2f2f2;
+        padding-top: 10px;
+    }
+    .choose-car input[type="submit"] {
+        margin-bottom: 20px;
+    }
 }
+@media (max-width: 380px) {
+    .choose-product input[type="search"] {
+        margin-bottom: 10px;
+    }
+}
+
+
