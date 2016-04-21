@@ -1425,9 +1425,6 @@ input:focus:-ms-input-placeholder {color: transparent!important;}
     width: 20px;
     height: 10px;
 }
-.price-form .product-amount-controls {
-
-}
 .price-form-submit {
     display: none;
 }
