@@ -83,7 +83,7 @@ $(document).ready(function () {
 
     $('.icon-menu-middle-control').click(function() {
         $(this).parent().toggleClass('active');
-        $('.menu-middle ul').fadeToggle();
+        $(this).parents('.menu-middle-control').siblings('.menu').fadeToggle();
     });
 
 
